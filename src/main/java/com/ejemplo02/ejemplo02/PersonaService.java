@@ -10,5 +10,4 @@ public interface PersonaService {
     Persona add(Persona p);
     Persona edit(Persona p);
     Persona delete(int id);
-    
 }

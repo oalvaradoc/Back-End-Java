@@ -16,22 +16,29 @@ public class PersonaServiceImp implements PersonaService{
 
     @Override
     public Persona listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.findById(id);
+        
     }
 
     @Override
     public Persona add(Persona p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.save(p);
     }
 
     @Override
     public Persona edit(Persona p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repositorio.save(p);
     }
 
     @Override
     public Persona delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            Persona p = repositorio.findById(id);
+            if (p!=null) {
+            repositorio.delete(p);
+        }
+            return  p;
     }
+
+
     
 }
