@@ -2,7 +2,6 @@ package com.ejemplo02.ejemplo02;
 
 import java.util.List;
 
-
 public interface PersonaService {
     List<Persona>listar();
     Persona listarId(int id);
